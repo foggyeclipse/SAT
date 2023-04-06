@@ -6,7 +6,7 @@ namespace SAT;
 
 public static class Dpll
 {
-    public static(bool, List<int>) AlgorithmDpll(List<int>? solution, List<List<int>> clauses)
+    public static(bool, List<int>? solution) AlgorithmDpll(List<int>? solution, List<List<int>> clauses)
     {
         UnitPropagate(solution, clauses);
         PureLiteralAssign(solution, clauses);
@@ -40,9 +40,9 @@ public static class Dpll
         var copyPositiveClauses = new List<List<int>>();
         var copyNegativeClauses = new List<List<int>>();
 
-        List<List<int>> AddLiteralToCopyPositiveClauses(List<List<int>> positiveClauses)
+        List<List<int>> AddLiteralToCopyPositiveClauses(List<List<int>> parametrClauses)
         {
-            foreach (var clause in positiveClauses)
+            foreach (var clause in parametrClauses)
             {
                 var copyLiteralPositiveClauses = new List<int>();
                 foreach (var literal in clause)
@@ -56,9 +56,9 @@ public static class Dpll
             return copyPositiveClauses;
         }
 
-        List<List<int>> AddLiteralToCopyNegativeClauses(List<List<int>> negativeClauses)
+        List<List<int>> AddLiteralToCopyNegativeClauses(List<List<int>> parametrClauses)
         {
-            foreach (var clause in negativeClauses)
+            foreach (var clause in parametrClauses)
             {
                 var copyLiteralNegativeClauses = new List<int>();
                 foreach (var literal in clause)
@@ -78,19 +78,19 @@ public static class Dpll
         var copyPositiveSolution = new List<int>();
         var copyNegativeSolution = new List<int>();
 
-        foreach (var literal in solution)
+        foreach (var literal in solution!)
         {
             copyPositiveSolution.Add(literal);
             copyNegativeSolution.Add(literal);
         }
 
-        (bool solved, solution) = AlgorithmDpll(copyPositiveSolution, copyPositive);
-        if (solved)
+        (var dpll, solution) = AlgorithmDpll(copyPositiveSolution, copyPositive);
+        if (dpll)
         {
-            solution = solution.ToHashSet().ToList();
+            solution = solution!.ToHashSet().ToList();
             return (true, solution);
         }
-        // return AlgorithmDpll(copyPositiveSolution, copyPositive) || AlgorithmDpll(copyNegativeSolution, copyNegative);
+
         return AlgorithmDpll(copyNegativeSolution, copyNegative);
     }
 

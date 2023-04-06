@@ -21,4 +21,8 @@
       <ProjectReference Include="..\SAT\SAT.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="SATTests\" />
+    </ItemGroup>
+
 </Project>
