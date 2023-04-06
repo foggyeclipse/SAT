@@ -1,0 +1,15 @@
+/Users/macbook/RiderProjects/SAT/SAT/bin/Debug/net7.0/SAT
+/Users/macbook/RiderProjects/SAT/SAT/bin/Debug/net7.0/SAT.deps.json
+/Users/macbook/RiderProjects/SAT/SAT/bin/Debug/net7.0/SAT.runtimeconfig.json
+/Users/macbook/RiderProjects/SAT/SAT/bin/Debug/net7.0/SAT.dll
+/Users/macbook/RiderProjects/SAT/SAT/bin/Debug/net7.0/SAT.pdb
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/SAT.csproj.AssemblyReference.cache
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/SAT.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/SAT.AssemblyInfoInputs.cache
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/SAT.AssemblyInfo.cs
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/SAT.csproj.CoreCompileInputs.cache
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/SAT.dll
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/refint/SAT.dll
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/SAT.pdb
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/SAT.genruntimeconfig.cache
+/Users/macbook/RiderProjects/SAT/SAT/obj/Debug/net7.0/ref/SAT.dll

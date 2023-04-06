@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "W5O2D4PHWVoEOV3uGbDV8wSzbQ8YQdP/fd/O5wm9widvoOsA4PX3Q8M8ryO7f8hVO6xPm088KmZBIjkbi/Ewbw==",
+  "success": true,
+  "projectFilePath": "/Users/macbook/RiderProjects/SAT/SAT/SAT.csproj",
+  "expectedPackageFiles": [
+    "/Users/macbook/.nuget/packages/stylecop.analyzers/1.0.2/stylecop.analyzers.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
