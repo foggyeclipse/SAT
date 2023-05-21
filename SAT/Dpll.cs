@@ -120,6 +120,14 @@ public static class Dpll
                 {
                     clause.Remove(-literal);
                 }
+
+                foreach (var temporaryLiteral in clause.ToList())
+                {
+                    if (temporaryLiteral == -literal)
+                    {
+                        clause.Remove(temporaryLiteral);
+                    }
+                }
             }
         }
 
