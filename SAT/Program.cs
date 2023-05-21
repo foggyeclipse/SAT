@@ -2,7 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using SAT;
+namespace SAT;
 
-Sat sat = new Sat("/Users/macbook/Desktop/sat_200_680.txt");
-sat.SatMethod();
+public static class Program
+{
+    private static void Main()
+    {
+    }
+}

@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAT", "SAT\SAT.csproj", "{CF66C851-628A-49BC-AFC0-8A444052EDB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSAT", "TestSAT\TestSAT.csproj", "{DD6139ED-61EC-4D0D-9324-E12076FCABC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSAT", "TestSAT\TestSAT.csproj", "{F10599AF-7A82-4C55-80FE-BE4CD8B822D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{CF66C851-628A-49BC-AFC0-8A444052EDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF66C851-628A-49BC-AFC0-8A444052EDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF66C851-628A-49BC-AFC0-8A444052EDB6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD6139ED-61EC-4D0D-9324-E12076FCABC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD6139ED-61EC-4D0D-9324-E12076FCABC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD6139ED-61EC-4D0D-9324-E12076FCABC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD6139ED-61EC-4D0D-9324-E12076FCABC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F10599AF-7A82-4C55-80FE-BE4CD8B822D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10599AF-7A82-4C55-80FE-BE4CD8B822D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10599AF-7A82-4C55-80FE-BE4CD8B822D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10599AF-7A82-4C55-80FE-BE4CD8B822D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

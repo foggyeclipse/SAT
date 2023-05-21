@@ -19,7 +19,7 @@ public class Sat
     public void SatMethod()
     {
         var clauses = ParseDimacs.Parse(Path);
-        (var sol, Solution) = Dpll.AlgorithmDpll(this.Solution, clauses);
+        (var sol, this.Solution) = Dpll.AlgorithmDpll(this.Solution, clauses);
         if (sol)
         {
             Console.WriteLine("s SATISFIABLE");

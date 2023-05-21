@@ -1,13 +1,13 @@
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/CoverletSourceRootsMapping
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/SAT.deps.json
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/SAT.runtimeconfig.json
+/Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/SAT
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/NUnit3.TestAdapter.dll
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/NUnit3.TestAdapter.pdb
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/nunit.engine.dll
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/nunit.engine.api.dll
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/nunit.engine.core.dll
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/testcentric.engine.metadata.dll
-/Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/SAT
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/TestSAT.deps.json
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/TestSAT.runtimeconfig.json
 /Users/macbook/RiderProjects/SAT/TestSAT/bin/Debug/net7.0/TestSAT.dll
