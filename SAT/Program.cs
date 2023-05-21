@@ -6,7 +6,9 @@ namespace SAT;
 
 public static class Program
 {
-    private static void Main()
+    private static void Main(string[] args)
     {
+        Sat sat = new Sat(args[0]);
+        sat.SatMethod();
     }
 }
