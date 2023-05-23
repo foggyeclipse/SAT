@@ -28,7 +28,12 @@ public static class Dpll
         }
 
         var chooseLiteral = ChooseLiteral(clauses);
-        var copyClauses = clauses.ToList();
+        List<List<int>> copyClauses = new List<List<int>>();
+        foreach (var clause in clauses)
+        {
+            var copyClause = clause.ToList();
+            copyClauses.Add(copyClause);
+        }
 
         copyClauses.Add(new List<int> { chooseLiteral });
         clauses.Add(new List<int> { -chooseLiteral });
@@ -41,7 +46,7 @@ public static class Dpll
             return (true, copySolution);
         }
 
-        return AlgorithmDpll(solution, copyClauses);
+        return AlgorithmDpll(solution, clauses);
     }
 
     private static void UnitPropagate(List<int> solution, List<List<int>> clauses)
@@ -102,7 +107,7 @@ public static class Dpll
 
         foreach (var literal in set)
         {
-            if (set.Contains(-literal))
+            if (!set.Contains(-literal))
             {
                 temporarySolution.Add(literal);
             }
