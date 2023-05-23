@@ -2,11 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Collections.Generic;
+using System.Linq;
+
 namespace SAT;
 
 public static class Dpll
 {
-    public static(bool, List<int>? solution) AlgorithmDpll(List<int>? solution, List<List<int>> clauses)
+    public static(bool, List<int> solution) AlgorithmDpll(List<int> solution, List<List<int>> clauses)
     {
         UnitPropagate(solution, clauses);
         PureLiteralAssign(solution, clauses);
@@ -25,76 +28,23 @@ public static class Dpll
         }
 
         var chooseLiteral = ChooseLiteral(clauses);
-        var positiveClauses = new List<List<int>>();
-        var negativeClauses = new List<List<int>>();
+        var copyClauses = clauses.ToList();
 
-        foreach (var clause in clauses)
-        {
-            positiveClauses.Add(clause);
-            negativeClauses.Add(clause);
-        }
+        copyClauses.Add(new List<int> { chooseLiteral });
+        clauses.Add(new List<int> { -chooseLiteral });
 
-        positiveClauses.Add(new List<int> { chooseLiteral });
-        negativeClauses.Add(new List<int> { -chooseLiteral });
-
-        var copyPositiveClauses = new List<List<int>>();
-        var copyNegativeClauses = new List<List<int>>();
-
-        List<List<int>> AddLiteralToCopyPositiveClauses(List<List<int>> parametrClauses)
-        {
-            foreach (var clause in parametrClauses)
-            {
-                var copyLiteralPositiveClauses = new List<int>();
-                foreach (var literal in clause)
-                {
-                    copyLiteralPositiveClauses.Add(literal);
-                }
-
-                copyPositiveClauses.Add(copyLiteralPositiveClauses);
-            }
-
-            return copyPositiveClauses;
-        }
-
-        List<List<int>> AddLiteralToCopyNegativeClauses(List<List<int>> parametrClauses)
-        {
-            foreach (var clause in parametrClauses)
-            {
-                var copyLiteralNegativeClauses = new List<int>();
-                foreach (var literal in clause)
-                {
-                    copyLiteralNegativeClauses.Add(literal);
-                }
-
-                copyNegativeClauses.Add(copyLiteralNegativeClauses);
-            }
-
-            return copyNegativeClauses;
-        }
-
-        var copyPositive = AddLiteralToCopyPositiveClauses(positiveClauses);
-        var copyNegative = AddLiteralToCopyNegativeClauses(negativeClauses);
-
-        var copyPositiveSolution = new List<int>();
-        var copyNegativeSolution = new List<int>();
-
-        foreach (var literal in solution!)
-        {
-            copyPositiveSolution.Add(literal);
-            copyNegativeSolution.Add(literal);
-        }
-
-        (var dpll, solution) = AlgorithmDpll(copyPositiveSolution, copyPositive);
+        var copySolution = solution.ToList();
+        (var dpll, copySolution) = AlgorithmDpll(copySolution, copyClauses);
         if (dpll)
         {
-            solution = solution!.ToHashSet().ToList();
-            return (true, solution);
+            copySolution = copySolution.ToHashSet().ToList();
+            return (true, copySolution);
         }
 
-        return AlgorithmDpll(copyNegativeSolution, copyNegative);
+        return AlgorithmDpll(solution, copyClauses);
     }
 
-    private static void UnitPropagate(List<int>? solution, List<List<int>> clauses)
+    private static void UnitPropagate(List<int> solution, List<List<int>> clauses)
     {
         var temporarySolution = new List<int>();
         foreach (var clause in clauses)
@@ -133,11 +83,11 @@ public static class Dpll
 
         foreach (var literal in temporarySolution)
         {
-            solution!.Add(literal);
+            solution.Add(literal);
         }
     }
 
-    private static void PureLiteralAssign(List<int>? solution, List<List<int>> clauses)
+    private static void PureLiteralAssign(List<int> solution, List<List<int>> clauses)
     {
         var temporarySolution = new List<int>();
         var set = new HashSet<int>();
@@ -152,7 +102,7 @@ public static class Dpll
 
         foreach (var literal in set)
         {
-            if (!set.Contains(-literal))
+            if (set.Contains(-literal))
             {
                 temporarySolution.Add(literal);
             }
@@ -171,7 +121,7 @@ public static class Dpll
 
         foreach (var literal in temporarySolution)
         {
-            solution!.Add(literal);
+            solution.Add(literal);
         }
     }
 

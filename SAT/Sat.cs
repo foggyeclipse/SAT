@@ -2,6 +2,9 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+
 namespace SAT;
 
 public class Sat
@@ -12,7 +15,7 @@ public class Sat
         this.Solution = new List<int>();
     }
 
-    public List<int>? Solution { get; set; }
+    public List<int> Solution { get; set; }
 
     private static string? Path { get; set; }
 
